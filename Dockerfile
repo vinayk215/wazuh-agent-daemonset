@@ -6,7 +6,7 @@ RUN apt-get update && \
     mkdir /scripts /config\
     pip3 install docker
 # Install the Wazuh agent
-ARG MANAGER_IP="192.168.32.128"
+ARG MANAGER_IP="0.0.0.0"    #HERE CHANGED
 ENV WAZUH_MANAGER ${MANAGER_IP}
 RUN curl -so wazuh-agent.deb https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.3.10-1_amd64.deb && WAZUH_MANAGER=${WAZUH_MANAGER} dpkg -i ./wazuh-agent.deb
 
