@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: wazuh-daemonset
-  namespace: default
+  namespace: wazuh
   labels:
     k8s-app: wazuh-daemonset
 spec:
